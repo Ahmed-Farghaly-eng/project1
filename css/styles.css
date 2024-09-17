@@ -1,0 +1,180 @@
+/* Import base style */
+@import './base/index.css';
+
+/* Import helpers style */
+/* @import './helpers/index.css'; */
+
+/* light-dark-mode */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 30px;
+    width: 200px;
+    margin: 20px auto;
+}
+
+/* Sun and Moon icons */
+.sun-icon, .moon-icon {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+/* Switch styles */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin: 0 10px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #6200ea;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+/* Rounded slider */
+.slider.round {
+    border-radius: 30px;
+}
+
+/* dark-mode-style */
+body.dark-mode {
+    background-color: #2c2c2c;
+    color: #ffffff;
+}
+
+body.dark-mode div {
+    background-color: #2c2c2c;
+    color: #ffffff;
+}
+
+body.dark-mode .main-contains {
+    background-color: rgba(36, 34, 34, 0.788);
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+}
+
+.modal-content {
+    background-color: #1f2937;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 400px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: white;
+    cursor: pointer;
+}
+
+/* Input styles */
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 2px solid #4b5563;
+    border-radius: 4px;
+    background-color: #2d3748;
+    color: white;
+}
+
+textarea {
+    height: 80px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #2d3748;
+    color: white;
+    border: 2px solid #4b5563;
+    border-radius: 4px;
+}
+
+/* Subtask styles */
+.add-subtask-btn {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.add-subtask-btn:hover {
+    background-color: #2563eb;
+}
+
+.submit-btn {
+    background-color: #10b981;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    background-color: #059669;
+}
